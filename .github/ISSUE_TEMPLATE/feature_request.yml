@@ -1,0 +1,30 @@
+name: Feature request
+description: Suggest a new tool or an improvement
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What do you want to ask your AI assistant?
+      description: Describe the question or task, e.g. "Which orders are stuck in Pending payment for more than a day?"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed tool or change
+      description: Tool name, inputs, and what the result should contain.
+  - type: dropdown
+    id: access
+    attributes:
+      label: Does it need write access?
+      options:
+        - No, read-only
+        - Yes, it changes data
+    validations:
+      required: true
+  - type: textarea
+    id: scopes
+    attributes:
+      label: commercetools API and scopes involved
+      placeholder: e.g. Orders API, view_orders

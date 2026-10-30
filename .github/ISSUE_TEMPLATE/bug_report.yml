@@ -1,0 +1,57 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please **do not paste credentials, client secrets or customer data**.
+        Redact project keys and ids if they are sensitive.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: Tool name
+      placeholder: e.g. get_order
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output (stderr)
+      description: Remove any secrets before pasting.
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: Server version
+      placeholder: e.g. 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: MCP client
+      options:
+        - Claude Desktop
+        - Claude Code
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: transport
+    attributes:
+      label: Transport
+      options:
+        - stdio (default)
+        - streamable HTTP (http profile)
+        - Docker
+  - type: input
+    id: java
+    attributes:
+      label: Java version and OS
+      placeholder: e.g. Temurin 21.0.5 on macOS 15
