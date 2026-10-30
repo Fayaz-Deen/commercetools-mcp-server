@@ -28,7 +28,7 @@
     <properties>
         <java.version>21</java.version>
         <spring-ai.version>1.1.8</spring-ai.version>
-        <commercetools-sdk.version>19.11.0</commercetools-sdk.version>
+        <commercetools-sdk.version>20.3.0</commercetools-sdk.version>
     </properties>
 
     <dependencyManagement>
