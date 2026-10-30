@@ -1,0 +1,14 @@
+# Streamable HTTP transport: run with --spring.profiles.active=http (or SPRING_PROFILES_ACTIVE=http).
+# The endpoint has no authentication, so it binds to localhost only by default.
+spring:
+  main:
+    web-application-type: servlet
+  ai:
+    mcp:
+      server:
+        stdio: false
+        protocol: streamable
+
+server:
+  address: ${MCP_HTTP_ADDRESS:127.0.0.1}
+  port: ${MCP_HTTP_PORT:8080}

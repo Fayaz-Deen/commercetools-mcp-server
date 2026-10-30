@@ -1,0 +1,38 @@
+# Default: stdio transport for Claude Desktop / Claude Code.
+# stdout carries the MCP protocol, so the banner is off and all logging goes to stderr (logback-spring.xml).
+spring:
+  application:
+    name: commercetools-mcp-server
+  main:
+    banner-mode: off
+    web-application-type: none
+  ai:
+    mcp:
+      server:
+        name: commercetools-mcp-server
+        version: '@project.version@'
+        type: sync
+        stdio: true
+        annotation-scanner:
+          enabled: false # tools are registered explicitly in McpServerConfig
+        instructions: >-
+          Tools to inspect a commercetools project: products, prices, categories, inventory,
+          carts, orders, customers and discount codes. All tools are read-only unless the
+          server was started with CT_MCP_ALLOW_WRITES=true.
+
+ctp:
+  project-key: ${CTP_PROJECT_KEY:}
+  client-id: ${CTP_CLIENT_ID:}
+  client-secret: ${CTP_CLIENT_SECRET:}
+  auth-url: ${CTP_AUTH_URL:}
+  api-url: ${CTP_API_URL:}
+  scopes: ${CTP_SCOPES:}
+
+ct:
+  mcp:
+    allow-writes: ${CT_MCP_ALLOW_WRITES:false}
+
+logging:
+  level:
+    root: WARN
+    io.github.fayazdeen: INFO
