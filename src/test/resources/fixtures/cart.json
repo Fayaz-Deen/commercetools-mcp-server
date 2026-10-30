@@ -1,0 +1,30 @@
+{
+  "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+  "version": 7,
+  "customerId": "d4c3b2a1-6f5e-4b7a-9d8c-5c4b3a2f1e0d",
+  "customerEmail": "jane.doe@example.com",
+  "cartState": "Active",
+  "country": "DE",
+  "lineItems": [
+    {
+      "id": "e1e2e3e4-f5f6-4a7a-8b8b-9c9c0d0d1e1e",
+      "productId": "5a8a0e1f-0b5c-4c63-9d1e-3f2a6b7c8d90",
+      "name": { "en": "Trail Runner Shoe" },
+      "productType": { "typeId": "product-type", "id": "8e5f0b6a-1c2d-4e3f-9a8b-7c6d5e4f3a21" },
+      "variant": { "id": 1, "sku": "TR-42-BLK" },
+      "price": {
+        "id": "0f1e2d3c-4b5a-4968-8776-655443322110",
+        "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 12999, "fractionDigits": 2 }
+      },
+      "quantity": 2,
+      "totalPrice": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 25998, "fractionDigits": 2 },
+      "lineItemMode": "Standard",
+      "priceMode": "Platform"
+    }
+  ],
+  "totalPrice": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 25998, "fractionDigits": 2 },
+  "totalLineItemQuantity": 2,
+  "shippingAddress": { "country": "DE", "city": "Berlin", "streetName": "Examplestrasse", "streetNumber": "1" },
+  "createdAt": "2026-03-05T08:00:00.000Z",
+  "lastModifiedAt": "2026-03-05T08:15:00.000Z"
+}

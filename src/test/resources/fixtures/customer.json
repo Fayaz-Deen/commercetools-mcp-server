@@ -1,0 +1,21 @@
+{
+  "id": "d4c3b2a1-6f5e-4b7a-9d8c-5c4b3a2f1e0d",
+  "version": 2,
+  "key": "jane-doe",
+  "customerNumber": "C-1001",
+  "email": "jane.doe@example.com",
+  "password": "SYNTHETIC-PASSWORD-HASH",
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "dateOfBirth": "1990-05-17",
+  "isEmailVerified": true,
+  "customerGroup": { "typeId": "customer-group", "id": "f0e1d2c3-b4a5-4697-8879-6a5b4c3d2e1f" },
+  "addresses": [
+    { "id": "addr-1", "country": "DE", "city": "Berlin", "streetName": "Examplestrasse", "phone": "+49 30 0000000" },
+    { "id": "addr-2", "country": "AT", "city": "Vienna", "streetName": "Beispielgasse" }
+  ],
+  "stores": [ { "typeId": "store", "key": "eu-store" } ],
+  "authenticationMode": "Password",
+  "createdAt": "2025-11-20T14:00:00.000Z",
+  "lastModifiedAt": "2026-02-01T09:00:00.000Z"
+}
