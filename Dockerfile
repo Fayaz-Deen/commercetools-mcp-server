@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM eclipse-temurin:21-jdk AS build
+FROM eclipse-temurin:24-jdk AS build
 WORKDIR /src
 COPY .mvn/ .mvn/
 COPY mvnw pom.xml ./
@@ -8,7 +8,7 @@ RUN ./mvnw -B -ntp -q dependency:go-offline
 COPY src/ src/
 RUN ./mvnw -B -ntp -q package -DskipTests
 
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:24-jre
 RUN groupadd --system mcp && useradd --system --gid mcp --no-create-home mcp
 COPY --from=build /src/target/commercetools-mcp-server.jar /app/app.jar
 USER mcp
